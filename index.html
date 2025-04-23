@@ -1,10 +1,92 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>My Website</title>
-  </head>
-  <body>
-    <h1>Hello, world!</h1>
-    <p>This is my GitHub Pages site.</p>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Personal Site</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+      color: #333;
+    }
+    header {
+      background-color: #222;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .container {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+    section {
+      margin-bottom: 3rem;
+    }
+    h1, h2 {
+      color: #444;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: #eee;
+      margin-top: 4rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div><strong>MySite</strong></div>
+    <nav>
+      <a href="#about">About Me</a>
+      <a href="#blog">Blog</a>
+      <a href="#work">Work</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <section id="about">
+      <h2>About Me</h2>
+      <p>Hello! I’m [Your Name], a [Your Role] who enjoys creating clean, user-friendly websites and visualizations.</p>
+    </section>
+
+    <section id="blog">
+      <h2>Blog</h2>
+      <p>Here’s where I share thoughts on tech, design, and the occasional life story. More to come soon!</p>
+    </section>
+
+    <section id="work">
+      <h2>Work</h2>
+      <p>This section showcases my projects. You can embed Tableau dashboards here or link to case studies.</p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Feel free to <a href="mailto:your@email.com">email me</a> or find me on LinkedIn.</p>
+    </section>
+  </div>
+
+  <footer>
+    &copy; 2025 Your Name. All rights reserved.
+  </footer>
+
+</body>
 </html>
