@@ -205,5 +205,68 @@ header {
 
   .logo img {
     height: 30px;
+
+  .menu-toggle {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #1e2a38;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+
+  nav {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
+}
+
+nav.active {
+  max-height: 500px; /* enough height to fit all your links */
+  overflow: visible;
+}
+  
+  .menu-toggle {
+    display: block;
+  }
+
+  nav {
+    display: none;
+    width: 100%;
+  }
+
+  nav.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f4f7fb;
+    position: absolute;
+    top: 80px; /* adjust based on header height */
+    left: 0;
+    right: 0;
+    padding: 1rem 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .nav-links li {
+    text-align: center;
+  }
+
+  <script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const nav = document.querySelector('nav');
+
+  menuToggle.addEventListener('click', () => {
+    nav.classList.toggle('active');
+  });
+</script>
+    
+}
   }
 }
