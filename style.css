@@ -170,3 +170,40 @@ header {
 .home-links li:nth-child(4) {
   animation-delay: 0.8s;
 }
+
+@media (max-width: 768px) {
+  .hero {
+    background-size: 90% auto;
+    background-position: top center;
+    height: 30vh;
+    padding: 2rem 1rem;
+    justify-content: center;
+  }
+
+  .home-links {
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .home-links a {
+    font-size: 1.6rem;
+    letter-spacing: 0.08em;
+    -webkit-text-stroke: 0.8px #1e2a38;
+  }
+
+  .nav-links {
+    gap: 1.5rem;
+    font-size: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav-links li {
+    flex: 1 1 45%;
+    text-align: center;
+  }
+
+  .logo img {
+    height: 30px;
+  }
+}
