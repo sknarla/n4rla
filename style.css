@@ -214,39 +214,44 @@ header {
 }
 
 /* Mobile styles */
+/* Base styles */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #1e2a38;
+}
+
+nav {
+  display: flex;
+}
+
 @media (max-width: 768px) {
-
-  nav {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.5s ease-out;
-}
-
-nav.active {
-  max-height: 500px; /* enough height to fit all your links */
-  overflow: visible;
-}
-  
   .menu-toggle {
     display: block;
   }
 
   nav {
-    display: none;
-    width: 100%;
-  }
-
-  nav.active {
-    display: flex;
+    display: none; /* 👈 hide nav completely on mobile initially */
     flex-direction: column;
     align-items: center;
     background-color: #f4f7fb;
     position: absolute;
-    top: 80px; /* adjust based on header height */
+    top: 80px; /* adjust based on your header height */
     left: 0;
     right: 0;
     padding: 1rem 0;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+  }
+
+  nav.active {
+    display: flex;
+    max-height: 500px;
+    overflow: visible;
   }
 
   .nav-links {
@@ -257,15 +262,8 @@ nav.active {
   .nav-links li {
     text-align: center;
   }
+}
 
-  <script>
-  const menuToggle = document.getElementById('menu-toggle');
-  const nav = document.querySelector('nav');
-
-  menuToggle.addEventListener('click', () => {
-    nav.classList.toggle('active');
-  });
-</script>
     
 }
   }
