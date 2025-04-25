@@ -49,6 +49,7 @@ nav {
 .navbar {
   display: flex;
   justify-content: center;
+  flex: 1;
 }
 
 .nav-links {
