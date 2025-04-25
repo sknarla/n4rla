@@ -69,7 +69,7 @@ nav {
 }.hero {
   background: url('hero.jpeg') center/cover no-repeat;
     color: #ffffff;
-    background-size: 50%;
+   background-size: 600px auto; /* 👈 fixed width, auto height */
     padding: 4rem 2rem;
     text-align: left;
     position: relative;
