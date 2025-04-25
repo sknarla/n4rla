@@ -26,11 +26,17 @@ header {
   padding: 1rem 2rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between; /* 👈 keeps logo left and nav/menu right */
   position: sticky;
   top: 0;
   z-index: 999;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  flex: 1; /* 👈 let nav take remaining space */
 }
 
 .menu-toggle {
@@ -38,12 +44,6 @@ header {
   font-size: 2rem;
   cursor: pointer;
   color: #1e2a38;
-}
-
-nav {
-  display: flex;
-  justify-content: center;
-  width: auto;
 }
 
 .navbar {
@@ -116,7 +116,7 @@ nav {
 }
 
 .home-links a {
-  font-size: 2.7rem;
+  font-size: 2rem; /* 👈 smaller, but still bold */
   font-weight: 600;
   color: transparent;
   text-transform: uppercase;
