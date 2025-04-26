@@ -1,45 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Home | MySite</title>
-  <link rel="stylesheet" href="style.css">
-
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SN Website</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  
-  <header>
-  
+
+<header>
   <div class="logo">
-    <img src="image.png" alt="SN Logo" />
-  <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+    <img src="image.png" alt="SN Logo">
   </div>
-
-    <nav class="navbar">
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Me</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="work.html">Work</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-  <section class="hero">
-    <ul class="home-links">
-      <li><a href="about.html">About Me</a></li>
-      <li><a href="blog.html">Blog</a></li>
-      <li><a href="work.html">Work</a></li>
-      <li><a href="contact.html">Contact</a></li>
+  <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+  <nav>
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">Work</a></li>
+      <li><a href="#">Contact</a></li>
     </ul>
-  </section>
-  
+  </nav>
+</header>
 
-  <footer>
-    &copy; 2025 Sunil Narla. All rights reserved.
-  </footer>
+<section class="hero">
+  <ul class="home-links">
+    <li><a href="#">About Me</a></li>
+    <li><a href="#">Blog</a></li>
+    <li><a href="#">Work</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</section>
+
+<footer>
+  &copy; 2025 Sunil Narla. All rights reserved.
+</footer>
 
 <script>
   const menuToggle = document.getElementById('menu-toggle');
@@ -50,5 +47,6 @@
     menuToggle.classList.toggle('active');
   });
 </script>
+
 </body>
 </html>
