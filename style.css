@@ -6,14 +6,6 @@
   padding: 0;
 }
 
-.logo img {
-  height: 40px;
-  width: auto;
-  max-height: 40px;
-  max-width: 100%;
-  object-fit: contain;
-}
-
 body {
   font-family: 'Poppins', sans-serif;
   background: linear-gradient(120deg, #e5ecf4 0%, #d7e1ec 100%);
@@ -24,19 +16,18 @@ body {
 header {
   background-color: #f4f7fb;
   padding: 1rem 2rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   display: flex;
   align-items: center;
-  justify-content: space-between; /* 👈 keeps logo left and nav/menu right */
+  justify-content: space-between;
   position: sticky;
   top: 0;
   z-index: 999;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
-nav {
-  display: flex;
-  justify-content: center;
-  flex: 1; /* 👈 let nav take remaining space */
+.logo img {
+  height: 40px;
+  object-fit: contain;
 }
 
 .menu-toggle {
@@ -44,11 +35,17 @@ nav {
   font-size: 2rem;
   cursor: pointer;
   color: #1e2a38;
+  transition: transform 0.3s ease;
 }
 
-.navbar {
+.menu-toggle.active {
+  transform: rotate(90deg);
+}
+
+nav {
   display: flex;
   justify-content: center;
+  flex-grow: 1;
 }
 
 .nav-links {
@@ -57,10 +54,6 @@ nav {
   justify-content: center;
   gap: 2.5rem;
   font-size: 1.2rem;
-}
-
-.nav-links li {
-  position: relative;
 }
 
 .nav-links a {
@@ -78,7 +71,7 @@ nav {
   left: 0;
   bottom: 0;
   height: 2px;
-  width: 0%;
+  width: 0;
   background-color: #4da1ff;
   transition: width 0.3s ease;
 }
@@ -90,33 +83,26 @@ nav {
 .hero {
   background: url('hero.jpeg') center top / contain no-repeat;
   background-color: #ffffff;
-  color: #ffffff;
   padding: 4rem 2rem;
-  text-align: left;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  height: 35vh;
-  max-height: 500px;
+  text-align: center;
   min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .home-links {
   list-style: none;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   gap: 1.5rem;
-  padding: 0;
-  margin: 0;
-}
-
-.home-links li {
-  text-align: left;
+  margin-top: 2rem;
 }
 
 .home-links a {
-  font-size: 2.7rem;
+  font-size: 2rem;
   font-weight: 600;
   color: transparent;
   text-transform: uppercase;
@@ -129,17 +115,8 @@ nav {
 .home-links a:hover {
   color: #4da1ff;
   -webkit-text-stroke: 1.2px #4da1ff;
-  transform: translateX(4px);
-  text-shadow: 0 0 8px #4da1ff, 0 0 12px #4da1ff;
-}
-
-.container {
-  padding: 3rem 1.5rem;
-  max-width: 960px;
-  margin: auto;
-  background-color: #ffffff;
-  border-radius: 16px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+  text-shadow: 0 0 8px #4da1ff;
 }
 
 footer {
@@ -148,38 +125,17 @@ footer {
   background-color: #f4f7fb;
   color: #1e2a38;
   margin-top: 4rem;
-  border-top: 4px solid #e2e6ea;
   font-size: 0.95rem;
-  letter-spacing: 0.03em;
 }
 
-/* Animation for home links */
-@keyframes fadeSlideUp {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
   }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
-.home-links li {
-  opacity: 0;
-  animation: fadeSlideUp 0.8s ease-out forwards;
-}
-
-.home-links li:nth-child(1) { animation-delay: 0.2s; }
-.home-links li:nth-child(2) { animation-delay: 0.4s; }
-.home-links li:nth-child(3) { animation-delay: 0.6s; }
-.home-links li:nth-child(4) { animation-delay: 0.8s; }
-
-/* Responsive adjustments */
-@media (max-width: 768px) 
-
- nav {
-    display: none; /* hide nav links initially */
+  nav {
+    display: none;
     flex-direction: column;
     align-items: center;
     background-color: #f4f7fb;
@@ -188,22 +144,12 @@ footer {
     left: 0;
     right: 0;
     padding: 1rem 0;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    z-index: 999;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.5s ease-out;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    z-index: 998;
   }
 
   nav.active {
-    display: flex; /* show nav when hamburger clicked */
-    max-height: 500px;
-    overflow: visible;
-  }
-}
-  {
-  .menu-toggle {
-    display: block;
+    display: flex;
   }
 
   .nav-links {
@@ -211,30 +157,18 @@ footer {
     gap: 1.5rem;
   }
 
-  .nav-links li {
-    text-align: center;
+  .logo img {
+    height: 30px;
   }
 
   .hero {
     background-size: 90% auto;
-    background-position: top center;
     height: 30vh;
-    padding: 2rem 1rem;
-    justify-content: center;
-  }
-
-  .home-links {
-    align-items: center;
-    gap: 2rem;
   }
 
   .home-links a {
     font-size: 1.6rem;
     letter-spacing: 0.08em;
     -webkit-text-stroke: 0.8px #1e2a38;
-  }
-
-  .logo img {
-    height: 30px;
   }
 }
