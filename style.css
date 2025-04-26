@@ -42,6 +42,50 @@ header {
   transform: rotate(90deg);
 }
 
+
+.page-layout {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  min-height: 60vh; /* adjust depending on how tall you want it */
+}
+
+.home-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 2rem;
+  width: 250px; /* fixed sidebar width */
+  gap: 2rem;
+}
+.home-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.home-links a {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: transparent;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  text-decoration: none;
+  -webkit-text-stroke: 1.2px #1e2a38;
+  transition: all 0.3s ease;
+}
+.home-links a:hover {
+  color: #4da1ff;
+  -webkit-text-stroke: 1.2px #4da1ff;
+  transform: translateX(4px);
+}
+
+.home-links li {
+  opacity: 0; /* start hidden */
+  animation: fadeSlideIn 0.8s ease-out forwards;
+}
+
 nav {
   display: flex;
   justify-content: center;
@@ -78,50 +122,6 @@ nav {
 
 .nav-links a:hover::after {
   width: 100%;
-}
-
-.page-layout {
-  display: flex;
-  flex-direction: row;
-  align-items: stretch;
-  min-height: 60vh; /* adjust depending on how tall you want it */
-}
-
-.home-links {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  padding: 2rem;
-  width: 250px; /* fixed sidebar width */
-  background-color: #f4f7fb; /* optional: make sidebar background */
-  gap: 2rem;
-}
-.home-links ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.home-links a {
-  font-size: 1.8rem;
-  font-weight: 600;
-  color: transparent;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  text-decoration: none;
-  -webkit-text-stroke: 1.2px #1e2a38;
-  transition: all 0.3s ease;
-}
-.home-links a:hover {
-  color: #4da1ff;
-  -webkit-text-stroke: 1.2px #4da1ff;
-  transform: translateX(4px);
-}
-
-.home-links li {
-  opacity: 0; /* start hidden */
-  animation: fadeSlideIn 0.8s ease-out forwards;
 }
 
 .hero {
