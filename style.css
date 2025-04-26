@@ -81,6 +81,10 @@ header {
   transform: translateX(4px);
 }
 
+.home-links {
+  background-color: #ffffff;
+}
+
 .home-links li {
   opacity: 0; /* start hidden */
   animation: fadeSlideIn 0.8s ease-out forwards;
