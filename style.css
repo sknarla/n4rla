@@ -58,7 +58,7 @@ header {
   justify-content: center;
   padding: 2rem;
   width: 250px; /* fixed sidebar width */
-  gap: 2rem;
+  gap: 3rem;
 }
 .home-links ul {
   list-style: none;
